@@ -7,7 +7,7 @@ const db = require('../models');
 
 module.exports = function(app) {
   app.get('/api/products', function(req, res) {
-    db.product.findAll({}).then(function(rows) {
+    db.Product.findAll({}).then(function(rows) {
       res.json(rows)
     }).catch(function(error) {
       res.json({ error: error });
@@ -18,7 +18,7 @@ module.exports = function(app) {
   // Adds a new product to our database
   // Responds with success: true or false if successful
   app.post('/api/products', function(req, res) {
-    db.product.create(req.body).then(function(rows) {
+    db.Product.create(req.body).then(function(rows) {
       res.json({ success: true });
     }).catch(function(error) {
       res.json({ error: error })
