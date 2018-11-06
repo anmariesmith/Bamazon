@@ -1,0 +1,26 @@
+{
+  "name": "Bamazon",
+  "version": "1.0.0",
+  "description": "an Amazon-like storefront with the MySQL and Sequelize that will take in orders from customers and deplete stock from the store's inventory.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anmariesmith/Bamazon.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anmariesmith/Bamazon/issues"
+  },
+  "homepage": "https://github.com/anmariesmith/Bamazon#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "mysql2": "^1.6.3",
+    "sequelize": "^4.41.0"
+  }
+}
