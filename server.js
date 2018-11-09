@@ -18,7 +18,7 @@ app.use(express.static(path.join(__dirname, './public')));
 // -----------------
 
 require('./routes/api-routes.js')(app);
-require('./routes/html-routes')(app);
+require('./routes/html-routes.js')(app);
 
 
 // Syncs our database first
