@@ -28,7 +28,7 @@ module.exports = function(app) {
   // GET Request
   // Responds with just the requested product at the referenced id
   app.get('/api/products/:id', function(req, res) {
-    db.product.find({ where: { id: req.params.id }})
+    db.Product.find({ where: { id: req.params.id }})
       .then(function(data){
         res.json(data);
       }).catch(function(error) {
@@ -40,11 +40,12 @@ module.exports = function(app) {
   // Replaces the product info at the referenced id with the one provided
   // Responds with success: true or false if successful
   app.put('/api/products/:id', function(req, res) {
-    db.product.update(
+    db.Product.update(
       req.body,
       { where: { id: req.params.id } }
     ).then(function() {
-      res.json({ success: true });
+      db.Product.findAll({}).then(function(rows) {
+        res.json(rows)});
     }).catch(function(error) {
       res.json({ error: error });
     });
@@ -55,7 +56,7 @@ module.exports = function(app) {
   // Responds with success: true or false if successful
 
   app.delete('/api/products/:id', function(req, res) {
-    db.product.destroy({ 
+    db.Product.destroy({ 
       where: { id: req.params.id } 
     }).then(function() {
       res.json({ success: true });

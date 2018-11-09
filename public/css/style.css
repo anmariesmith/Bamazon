@@ -1,0 +1,16 @@
+/*------------------------
+    HIDE CLASS
+---------------------------*/
+
+.hide {
+  display: none;
+}
+
+.btn {
+  background-color: orange;
+  border:none;
+}
+
+.btn:hover {
+    background-color: black;
+}
