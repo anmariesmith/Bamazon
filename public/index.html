@@ -27,7 +27,7 @@
     />
   </head>
 
-  <body>
+  <body background ="./assets/diagonal-squares/diagonal-squares.png">
     <nav class="navbar navbar-light bg-light">
       <a class="navbar-brand" href="#">
         <img
@@ -37,6 +37,7 @@
           alt=""
         />
       </a>
+      <img class="bamazonLogo" src="assets/bamazonlogo.png" >
       <button
         class="rounded btncart pt-2 pb-2 pl-2 pr-2"
         data-toggle="modal"
@@ -46,13 +47,13 @@
       </button>
     </nav>
 
-    <div class="container">
+    <div class="container mt-5">
       <div class="hide alert alert-danger" id="error" role="alert">
         sorry, that is either an invalid entry or exceeds the amount we have in stock. Please enter a valid quantity.
       </div>
       <div class="row col-md-12">
         <table class="table">
-          <thead class="thead-dark">
+          <thead class="thead-dark text-align-center">
             <tr>
               <th scope="col">Product Id</th>
               <th scope="col">Product Name</th>
@@ -64,7 +65,7 @@
               <th></th>
             </tr>
           </thead>
-          <tbody class="table-body tbodypage"></tbody>
+          <tbody class="table-body bg-light tbodypage"></tbody>
         </table>
       </div>
     </div>
