@@ -2,6 +2,7 @@
 const express = require('express');
 const path = require('path');
 
+const db = require('./models');
 const app = express();
 
 // Defines a PORT for the server to listen for requests
@@ -19,7 +20,6 @@ app.use(express.static(path.join(__dirname, './public')));
 require('./routes/api-routes.js')(app);
 require('./routes/html-routes')(app);
 
-const db = require('./models');
 
 // Syncs our database first
 db.sequelize.sync().then(function(){
