@@ -8,17 +8,17 @@ var env = process.env.NODE_ENV || "development";
 var config = require(__dirname + "/../config/config.json")[env];
 var db = {};
 
-if (process.env.JAWSDBURL){
-  db= mysql.createConnection(process.env.JAWSDB_URL);
-}else{
-  db= mysql.createConnection({
-    host:'localhost',
-    user: 'root',
-    password: 'avw57966',
-    database: 'Bamazon_db'
+// if (process.env.JAWSDBURL){
+//   db= mysql.createConnection(process.env.JAWSDB_URL);
+// }else{
+//   db= mysql.createConnection({
+//     host:'localhost',
+//     user: 'root',
+//     password: 'avw57966',
+//     database: 'Bamazon_db'
 
-  })
-}
+//   })
+// }
 
 
 if (config.use_env_variable) {
