@@ -7,8 +7,10 @@ module.exports = function(connection, Sequelize) {
       price: Sequelize.STRING,
       stock_quantity: {
         type: Sequelize.INTEGER,
-        validate : {min:1}}
-    },{ timestamps: false }
+        validate: { min: 1 }
+      }
+    },
+    { timestamps: false }
   );
 
   return Product;
