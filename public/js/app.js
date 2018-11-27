@@ -16,8 +16,7 @@ const renderItems = function(items) {
 };
 
 const clearInput = function() {
-  console.warn("in clear input");
-  $("#input").val("");
+  $("[id =input]").val("");
 };
 
 const validate = function(item) {
